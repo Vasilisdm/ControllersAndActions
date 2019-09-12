@@ -1,10 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+
 namespace ControllersAndActions.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public HomeController()
+        public ViewResult Index() => View("SimpleForm");
+
+        public ViewResult ReceiveForm()
         {
+            var name = Request.Form["name"];
+            var city = Request.Form["city"];
+            return View("Result", $"{name} lives in {city}");
         }
     }
 }
