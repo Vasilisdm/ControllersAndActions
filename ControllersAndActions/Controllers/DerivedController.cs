@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace ControllersAndActions.Controllers
 {
@@ -8,5 +9,9 @@ namespace ControllersAndActions.Controllers
         {
             return View("Result", $"This is a derived controller");
         }
+
+        public ViewResult Headers() => View("DictionaryResult",
+                Request.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First())
+            );
     }
 }
