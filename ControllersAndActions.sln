@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersAndActions", "ControllersAndActions\ControllersAndActions.csproj", "{0781DA9C-63C9-4325-8B99-ABE16FCFD4B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersAndActions.Tests", "ControllersAndActions.Tests\ControllersAndActions.Tests.csproj", "{2475960D-7932-4055-AFBF-5B354BCB7DD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{0781DA9C-63C9-4325-8B99-ABE16FCFD4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0781DA9C-63C9-4325-8B99-ABE16FCFD4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0781DA9C-63C9-4325-8B99-ABE16FCFD4B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2475960D-7932-4055-AFBF-5B354BCB7DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2475960D-7932-4055-AFBF-5B354BCB7DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2475960D-7932-4055-AFBF-5B354BCB7DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2475960D-7932-4055-AFBF-5B354BCB7DD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
