@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text;
+using ControllersAndActions.Infrastructure;
 
 namespace ControllersAndActions.Controllers
 {
@@ -7,12 +8,10 @@ namespace ControllersAndActions.Controllers
     {
         public ViewResult Index() => View("SimpleForm");
 
-        public void ReceiveForm(string name, string city)
+        public void ReceiveForm(string name, string city) => new CustomHtmlResult
         {
-            Response.StatusCode = 200;
-            Response.ContentType = "text/html";
-            byte[] content = Encoding.ASCII.GetBytes($"<html><body>{name} lives in {city}</body></html>");
-            Response.Body.WriteAsync(content,0,content.Length);
-        }
+            Content = $"{name} lives in {city}";
+        };
+
     }
 }
