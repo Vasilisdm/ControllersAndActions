@@ -7,7 +7,7 @@ namespace ControllersAndActions.Controllers
     {
         public ViewResult Index()
         {
-            ViewBag.Message = "Hello";
+            ViewBag.Message = "Hello Master";
             ViewBag.Date = DateTime.Now;
             return View();
         }
