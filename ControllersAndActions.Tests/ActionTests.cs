@@ -1,5 +1,6 @@
 ﻿using ControllersAndActions.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using Xunit;
 
 namespace ControllersAndActions.Tests
@@ -17,6 +18,19 @@ namespace ControllersAndActions.Tests
 
             //Assert
             Assert.Equal("Result", result.ViewName);
+        }
+
+        [Fact]
+        public void ModelObjectType()
+        {
+            //Arrange
+            ExampleController cntrl = new ExampleController();
+
+            //Act
+            ViewResult result = cntrl.Index();
+
+            //Assert
+            Assert.IsType<DateTime>(result.ViewData.Model);
         }
     }
 }
