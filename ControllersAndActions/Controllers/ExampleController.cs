@@ -5,7 +5,7 @@ namespace ControllersAndActions.Controllers
 {
     public class ExampleController : Controller
     {
-        public JsonResult Index() => Json(new[] { "Bill", "George", "Kostas" });
+        public ContentResult Index() => Content("[\"Bill\", \"George\", \"Kostas\" ]", "application/json");
         
         public ViewResult Result() => View((object)"Hello Master");
 
