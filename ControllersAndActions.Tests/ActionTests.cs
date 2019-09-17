@@ -38,17 +38,15 @@ namespace ControllersAndActions.Tests
         [Fact]
         public void Redirection()
         {
-            ////Arrange
-            //ExampleController cntrl = new ExampleController();
+            //Arrange
+            ExampleController cntrl = new ExampleController();
 
-            ////Act
-            //RedirectToRouteResult result = cntrl.Redirect();
+            //Act
+            RedirectToActionResult result = cntrl.Redirect();
 
-            ////Assert
-            //Assert.False(result.Permanent);
-            //Assert.Equal("Example", result.RouteValues["controller"]);
-            //Assert.Equal("Index", result.RouteValues["action"]);
-            //Assert.Equal("MyID", result.RouteValues["Id"]);
+            //Assert
+            Assert.False(result.Permanent);
+            Assert.Equal("Index", result.ActionName);
         }
     }
 }
