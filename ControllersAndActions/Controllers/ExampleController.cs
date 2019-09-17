@@ -5,7 +5,7 @@ namespace ControllersAndActions.Controllers
 {
     public class ExampleController : Controller
     {
-        public ContentResult Index() => Content("[\"Bill\", \"George\", \"Kostas\" ]", "application/json");
+        public ObjectResult Index() => Ok(new[] { "Bill", "George", "Kostas" });
         
         public ViewResult Result() => View((object)"Hello Master");
 
