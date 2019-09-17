@@ -5,7 +5,7 @@ namespace ControllersAndActions.Controllers
 {
     public class ExampleController : Controller
     {
-        public ObjectResult Index() => Ok(new[] { "Bill", "George", "Kostas" });
+        public VirtualFileResult Index() => File("/lib/bootstrap/dist/css/bootstrap.css", "text/css");
         
         public ViewResult Result() => View((object)"Hello Master");
 
