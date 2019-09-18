@@ -6,8 +6,8 @@ namespace ControllersAndActions.Controllers
 {
     public class ExampleController : Controller
     {
-        public StatusCodeResult Index() => StatusCode(StatusCodes.Status200OK);
-        
+        public StatusCodeResult Index() => NotFound();
+
         public ViewResult Result() => View((object)"Hello Master");
 
         public RedirectToActionResult Redirect() => RedirectToAction(nameof(Index));
