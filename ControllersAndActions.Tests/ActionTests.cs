@@ -49,17 +49,30 @@ namespace ControllersAndActions.Tests
             Assert.Equal("Index", result.ActionName);
         }
 
+        //[Fact]
+        //public void JsonActionMethod()
+        //{
+        //    // Arrange
+        //    ExampleController cntrl = new ExampleController();
+
+        //    // Act
+        //    JsonResult result = cntrl.Index();
+
+        //    // Assert
+        //    Assert.Equal(new[] { "Bill", "George", "Kostas" }, result.Value);
+        //}
+
         [Fact]
-        public void JsonActionMethod()
+        public void NotFoundActionMethod()
         {
-            // Arrange
+            //Arrange
             ExampleController cntrl = new ExampleController();
 
-            // Act
-            JsonResult result = cntrl.Index();
+            //Act
+            StatusCodeResult result = cntrl.Index();
 
-            // Assert
-            Assert.Equal(new[] { "Bill", "George", "Kostas" }, result.Value);
+            //Assert
+            Assert.Equal(404, result.StatusCode);
         }
     }
 }
