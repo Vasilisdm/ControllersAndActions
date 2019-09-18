@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using System;
 
 namespace ControllersAndActions.Controllers
 {
     public class ExampleController : Controller
     {
-        public VirtualFileResult Index() => File("/lib/bootstrap/dist/css/bootstrap.css", "text/css");
+        public StatusCodeResult Index() => StatusCode(StatusCodes.Status200OK);
         
         public ViewResult Result() => View((object)"Hello Master");
 
